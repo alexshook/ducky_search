@@ -18,8 +18,12 @@ module DuckySearch
       result_number = 0
       # get all results by div class, return title and snippet
       all('div.result__body').each do |result|
-        new_obj = {}
-        new_obj[result.find('h2.result__title').text] = result.find('div.result__snippet').text
+        new_obj = {
+          id: result_number,
+          title: result.find('h2.result__title').text,
+          content: result.find('div.result__snippet').text
+        }
+        # new_obj[result.find('h2.result__title').text] = result.find('div.result__snippet').text
         results_array << new_obj
         result_number += 1
         break if result_number == results_length
