@@ -1,11 +1,18 @@
-<h1>Welcome to Ducky Search!</h1>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Welcome to Ducky Search!</h1>
 
-Search for anything here:
-<form action="search" method="get">
-  <input type="text" name="query" />
-  <input type="submit" name="submit" value="Search" />
-</form>
+  Search for anything here:
+  <form action="search" method="get">
+    <input type="text" name="query" />
+    <input type="submit" name="submit" value="Search" />
+  </form>
 
-<% if @results != nil %>
-  <%= @results %>
-<% end %>
+  <% if @results != nil %>
+    <%= @results %>
+  <% end %>
+</body>
+</html>
