@@ -1,0 +1,13 @@
+<h1>Welcome to Ducky Search!</h1>
+
+Search for anything here:
+<form action="duckysearch" method="get">
+  <input type="text" name="query" />
+  <input type="submit" name="submit" value="Search" />
+</form>
+
+<% if @results != nil %>
+  <% @results.each do |result| %>
+    <%= result %>
+  <% end %>
+<% end %>
