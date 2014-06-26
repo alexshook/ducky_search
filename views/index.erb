@@ -8,11 +8,28 @@
   Search for anything here:
   <form action="search" method="get">
     <input type="text" name="query" />
+    <br />
+    <br />
+    What kind of results do you want?
+    <br />
+    <br />
+    <input type="radio" name="selection" value="summary" />Topic Summary<br />
+    <input type="radio" name="selection" value="results" />Search Results<br />
+    <br />
     <input type="submit" name="submit" value="Search" />
   </form>
 
   <% if @results != nil %>
-    <%= @results %>
+  <h3>Search Results</h3>
+    <% @results.each do |hash| %>
+    <ul>
+      <li><%= hash[:title] %></li>
+    </ul>
+    <% end %>
+  <% end %>
+
+  <% if @summary_results != nil %>
+    <%= @summary_results %>
   <% end %>
 </body>
 </html>
