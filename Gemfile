@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rack'
 gem 'sinatra'
+gem 'qt'
 gem 'capybara'
 gem 'capybara-webkit'
 gem 'json'
