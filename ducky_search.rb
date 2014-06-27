@@ -1,4 +1,5 @@
 module DuckySearch
+  Capybara.app = App.new
   Capybara.current_driver = :webkit
   Capybara.app_host = "https://duckduckgo.com/"
 
