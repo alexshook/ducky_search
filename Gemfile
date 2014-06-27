@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rack'
 gem 'sinatra'
-gem 'capybara'
+gem 'capybara', '~> 2.0.2'
 gem 'capybara-webkit'
 gem 'json'
 gem 'httparty'
