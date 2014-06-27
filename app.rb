@@ -20,7 +20,6 @@ get '/search' do
   if @selection == 'summary'
     @summary_results = DuckySearch::Scraper.new.get_topic_summary(@query)
   else
-    binding.pry
     return status 404 if @query.nil?
     @results = DuckySearch::Scraper.new.scrape_duck_duck_go(@query)
   end
