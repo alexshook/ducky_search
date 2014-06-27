@@ -1,2 +1,8 @@
 source 'https://rubygems.org'
 gem 'rack'
+gem 'sinatra'
+gem 'capybara'
+gem 'capybara-webkit'
+gem 'json'
+gem 'httparty'
+gem 'pry'
