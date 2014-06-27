@@ -6,6 +6,7 @@ require 'capybara/dsl'
 require 'capybara-webkit'
 require 'json'
 require 'httparty'
+require 'pry'
 
 require_relative 'ducky_search'
 
@@ -18,10 +19,10 @@ get '/search' do
   @selection = params[:selection]
   if @selection == 'summary'
     @summary_results = DuckySearch::Scraper.new.get_topic_summary(@query)
+    binding.pry
   else
     return status 404 if @query.nil?
     @results = DuckySearch::Scraper.new.scrape_duck_duck_go(@query)
-    binding.pry
   end
     erb :index
 end

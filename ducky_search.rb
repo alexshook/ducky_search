@@ -30,7 +30,7 @@ module DuckySearch
     def get_topic_summary(query_string)
       results = HTTParty.get("http://api.duckduckgo.com/?q=#{query_string}&format=json")
       abstract = JSON.parse(results)['AbstractText']
-      return abstract
+      return abstract.size > 3 ? abstract : "Sorry, a summary is not available for this topic."
     end
   end
 

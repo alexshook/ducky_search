@@ -4,7 +4,9 @@
 </head>
 <body>
   <h1>Welcome to Ducky Search!</h1>
-
+  <p>powered by <a href="http://duckduckgo.com/">DuckDuckGo</a></p>
+  <br />
+  <br />
   Search for anything here:
   <form action="search" method="get">
     <input type="text" name="query" />
@@ -24,6 +26,9 @@
     <% @results.each do |hash| %>
     <ul>
       <li><%= hash[:title] %></li>
+      <ul>
+        <li><%= hash[:content] %></li>
+      </ul>
     </ul>
     <% end %>
   <% end %>
