@@ -6,7 +6,6 @@ require 'capybara/dsl'
 require 'capybara-webkit'
 require 'json'
 require 'httparty'
-require 'pry'
 
 require_relative 'ducky_search'
 
