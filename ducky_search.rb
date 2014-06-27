@@ -13,12 +13,14 @@ module DuckySearch
       results_array = []
       limit_results = 20
       result_number = 0
-      # get all results by div class, return title and snippet
+      # get all results by div class, return title, snippet, url
       all('div.result__body').each do |result|
+        links = []
         new_obj = {
           id: result_number,
           title: result.find('h2.result__title').text,
-          content: result.find('div.result__snippet').text
+          content: result.find('div.result__snippet').text,
+          url: result.find('h2.result__title a.result__a')[:href]
         }
         results_array << new_obj
         result_number += 1
