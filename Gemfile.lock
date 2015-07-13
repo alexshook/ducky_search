@@ -37,7 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (~> 2.1.0)
-  capybara-webkit
+  capybara-webkit (~> 1.1.1)
   httparty
   json
   rack
