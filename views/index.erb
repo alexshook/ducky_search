@@ -23,12 +23,9 @@
 
   <% if @results != nil %>
   <h3>Search Results</h3>
-    <% @results.each do |hash| %>
+    <% @results.each do |result| %>
     <ul>
-      <li><a href="<%= hash[:url] %>" target="_blank"><%= hash[:title] %></a></li>
-      <ul>
-        <li><%= hash[:content] %></li>
-      </ul>
+      <li><a href="<%= result[:url] %>" target="_blank"><%= result[:title] %></a></li>
     </ul>
     <% end %>
   <% end %>
